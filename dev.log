@@ -1,0 +1,50 @@
+
+> careers-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.68.115:3000
+
+✓ Starting...
+✓ Ready in 561ms
+ GET / 200 in 543ms (compile: 400ms, render: 143ms)
+ GET / 200 in 130ms (compile: 6ms, render: 124ms)
+ GET /jobs 200 in 40ms (compile: 27ms, render: 13ms)
+ GET /jobs/apply?role=media-buyer 200 in 45ms (compile: 30ms, render: 15ms)
+ GET / 200 in 17ms (compile: 5ms, render: 12ms)
+ GET / 200 in 106ms (compile: 7ms, render: 99ms)
+✓ Compiled in 1651ms
+✓ Compiled in 74ms
+✓ Compiled in 55ms
+✓ Compiled in 49ms
+✓ Compiled in 138ms
+ GET / 200 in 915ms (compile: 202ms, render: 713ms)
+✓ Compiled in 243ms
+✓ Compiled in 273ms
+✓ Compiled in 217ms
+✓ Compiled in 198ms
+✓ Compiled in 223ms
+✓ Compiled in 209ms
+ GET / 200 in 895ms (compile: 93ms, render: 802ms)
+✓ Compiled in 86ms
+✓ Compiled in 61ms
+ GET /jobs 200 in 77ms (compile: 52ms, render: 25ms)
+✓ Compiled in 110ms
+ GET /jobs 200 in 255ms (compile: 39ms, render: 216ms)
+✓ Compiled in 65ms
+ GET /jobs 200 in 240ms (compile: 44ms, render: 195ms)
+ GET /jobs 200 in 209ms (compile: 6ms, render: 203ms)
+✓ Compiled in 89ms
+ GET /jobs 200 in 286ms (compile: 72ms, render: 215ms)
+✓ Compiled in 104ms
+ GET /jobs 200 in 276ms (compile: 51ms, render: 225ms)
+✓ Compiled in 120ms
+ GET /jobs 200 in 273ms (compile: 42ms, render: 231ms)
+✓ Compiled in 82ms
+ GET /jobs 200 in 353ms (compile: 136ms, render: 217ms)
+ GET /jobs/apply?role=marketing-coordinator 200 in 117ms (compile: 74ms, render: 43ms)
+ GET / 200 in 89ms (compile: 59ms, render: 30ms)
+✓ Compiled in 67ms
+ GET / 200 in 219ms (compile: 66ms, render: 153ms)
+ GET /jobs 200 in 85ms (compile: 58ms, render: 27ms)
