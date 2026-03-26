@@ -12,12 +12,12 @@ export const translations = {
         navJobs: "Jobs",
 
         // Hero
-        heroBadge: "We're hiring",
-        heroTitle1: "Shape the Future",
+        heroBadge: "Freelance Opportunities",
+        heroTitle1: "Freelance",
         heroTitle2: "With Us",
         heroSubtitle: (count: number) =>
-            `We're building something extraordinary. Join our creative, ambitious team and make your mark across ${count} open positions.`,
-        statRoles: "Open Roles",
+            `We're building something extraordinary. Collaborate with our creative team as a freelancer across ${count} available opportunities.`,
+        statRoles: "Opportunities",
         statWork: "Flexible Work",
         statWorkVal: "Remote",
         statGrowth: "Growth",
@@ -164,8 +164,8 @@ export const translations = {
         contactInfoWeb: "@remark.iq",
 
         // Apply page header
-        applyTitle: "Join Our Team",
-        applySubtitle: "Tell us about yourself — we'd love to meet you.",
+        applyTitle: "Work With Us",
+        applySubtitle: "Tell us about yourself — we'd love to collaborate.",
 
         // Form labels
         fieldRole: "Role",
@@ -185,16 +185,16 @@ export const translations = {
         fieldCityPlaceholder: "Baghdad",
         fieldYearsExp: "Years of Experience",
         fieldYearsExpPlaceholder: "3",
-        fieldSalary: "Expected Salary",
-        fieldSalaryPlaceholder: "1,500,000 IQD / month",
+        fieldSalary: "Expected Rate / Budget",
+        fieldSalaryPlaceholder: "e.g. $500/project or $50/hr",
         fieldPortfolio: "Portfolio / LinkedIn URL",
         fieldPortfolioPlaceholder: "https://yourportfolio.com",
         fieldCv: "CV / Resume (PDF)",
         fieldCvUpload: "Click to upload your CV (PDF only)",
         fieldSkill: "Strongest Skill",
         fieldSkillPlaceholder: "e.g. Facebook Ads, Motion Graphics, Copywriting…",
-        fieldWhyJoin: "Why do you want to join?",
-        fieldWhyJoinPlaceholder: "Tell us what excites you about this opportunity…",
+        fieldWhyJoin: "Why do you want to work with us?",
+        fieldWhyJoinPlaceholder: "Tell us what excites you about this freelance opportunity…",
         submitBtn: "Submit Application",
         submittingBtn: "Submitting…",
         confidential: "Your information is kept strictly confidential.",
@@ -202,7 +202,7 @@ export const translations = {
         // Success
         successTitle: "Application Submitted!",
         successMsg:
-            "Thank you for applying. We'll review your application and get back to you within 5–7 business days.",
+            "Thank you for your interest in freelancing with us. We'll review your profile and get back to you within 5–7 business days.",
         successBtn: "Submit Another",
         successBackBtn: "Return to Roles",
 
@@ -358,20 +358,20 @@ export const translations = {
     ar: {
         // Nav
         navOpenApp: "قدّم الآن",
-        navAllRoles: "→ جميع الوظائف",
+        navAllRoles: "→ جميع الفرص",
         navServices: "الخدمات",
         navAbout: "من نحن",
         navClients: "عملاؤنا",
         navContact: "تواصل معنا",
-        navJobs: "الوظائف",
+        navJobs: "فرص العمل الحر",
 
         // Hero
-        heroBadge: "نحن نوظّف",
-        heroTitle1: "اصنع المستقبل",
+        heroBadge: "فرص عمل حر",
+        heroTitle1: "اعمل كفري لانس",
         heroTitle2: "معنا",
         heroSubtitle: (count: number) =>
-            `نحن نبني شيئاً استثنائياً. انضم إلى فريقنا المبدع الطموح وأثبت نفسك في ${count} وظيفة شاغرة.`,
-        statRoles: "وظيفة شاغرة",
+            `نحن نبني شيئاً استثنائياً. تعاون معنا كفري لانس وأثبت نفسك في ${count} فرصة متاحة.`,
+        statRoles: "فرصة متاحة",
         statWork: "عمل مرن",
         statWorkVal: "عن بُعد",
         statGrowth: "نمو",
@@ -392,7 +392,7 @@ export const translations = {
         footerConnect: "تواصل",
         footerAbout: "من نحن",
         footerTeam: "فريقنا",
-        footerCareers: "الوظائف",
+        footerCareers: "العمل الحر",
         footerEmail: "راسلنا",
         footerCall: "اتصل بنا",
         footerVisit: "زورنا",
@@ -518,12 +518,12 @@ export const translations = {
         contactInfoWeb: "@remark.iq",
 
         // Apply page header
-        applyTitle: "انضم إلى فريقنا",
-        applySubtitle: "أخبرنا عن نفسك — يسعدنا التعرف عليك.",
+        applyTitle: "اعمل معنا",
+        applySubtitle: "أخبرنا عن نفسك — يسعدنا التعاون معك.",
 
         // Form labels
-        fieldRole: "الوظيفة",
-        fieldRolePlaceholder: "— اختر وظيفة —",
+        fieldRole: "التخصص",
+        fieldRolePlaceholder: "— اختر تخصصك —",
         fieldFullName: "الاسم الكامل",
         fieldFullNamePlaceholder: "محمد علي",
         fieldWorkType: "طبيعة العمل المفضلة",
@@ -539,16 +539,16 @@ export const translations = {
         fieldCityPlaceholder: "بغداد",
         fieldYearsExp: "سنوات الخبرة",
         fieldYearsExpPlaceholder: "3",
-        fieldSalary: "الراتب المتوقع",
-        fieldSalaryPlaceholder: "مثال: 1,500,000 د.ع / شهر",
+        fieldSalary: "السعر / الميزانية المتوقعة",
+        fieldSalaryPlaceholder: "مثال: $500/مشروع أو $50/ساعة",
         fieldPortfolio: "رابط الملف الشخصي / LinkedIn",
         fieldPortfolioPlaceholder: "https://portfolio.com",
         fieldCv: "السيرة الذاتية (PDF)",
         fieldCvUpload: "انقر لرفع سيرتك الذاتية (PDF فقط)",
         fieldSkill: "أبرز مهاراتك",
         fieldSkillPlaceholder: "مثال: إعلانات فيسبوك، تصميم حركي، كتابة إبداعية…",
-        fieldWhyJoin: "لماذا تريد الانضمام إلينا؟",
-        fieldWhyJoinPlaceholder: "أخبرنا ما الذي يُحمسك في هذه الفرصة…",
+        fieldWhyJoin: "لماذا تريد العمل معنا؟",
+        fieldWhyJoinPlaceholder: "أخبرنا ما الذي يُحمسك في هذه الفرصة للعمل الحر…",
         submitBtn: "إرسال الطلب",
         submittingBtn: "جارٍ الإرسال…",
         confidential: "معلوماتك تُحفظ بسرية تامة.",
@@ -556,9 +556,9 @@ export const translations = {
         // Success
         successTitle: "!تم إرسال طلبك",
         successMsg:
-            "شكراً لتقديمك. سنراجع طلبك ونتواصل معك خلال 5–7 أيام عمل.",
+            "شكراً لاهتمامك بالعمل الحر معنا. سنراجع ملفك ونتواصل معك خلال 5–7 أيام عمل.",
         successBtn: "تقديم طلب آخر",
-        successBackBtn: "العودة للوظائف",
+        successBackBtn: "العودة للفرص",
 
         // Roles
         roles: {

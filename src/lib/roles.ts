@@ -14,7 +14,7 @@ export const ROLES: Role[] = [
         tags: [
             { label: "Strategy", color: "violet" },
             { label: "Team Lead", color: "blue" },
-            { label: "Full-time", color: "emerald" },
+            { label: "Freelance", color: "emerald" },
         ],
     },
     {
@@ -25,7 +25,7 @@ export const ROLES: Role[] = [
         tags: [
             { label: "Coordination", color: "blue" },
             { label: "Operations", color: "cyan" },
-            { label: "Full-time", color: "emerald" },
+            { label: "Freelance", color: "emerald" },
         ],
     },
     {
@@ -47,7 +47,7 @@ export const ROLES: Role[] = [
         tags: [
             { label: "Paid Ads", color: "amber" },
             { label: "ROAS", color: "cyan" },
-            { label: "Full-time", color: "emerald" },
+            { label: "Freelance", color: "emerald" },
         ],
     },
     {
@@ -58,7 +58,7 @@ export const ROLES: Role[] = [
         tags: [
             { label: "Leadership", color: "violet" },
             { label: "Brand", color: "pink" },
-            { label: "Full-time", color: "emerald" },
+            { label: "Freelance", color: "emerald" },
         ],
     },
     {
@@ -80,7 +80,7 @@ export const ROLES: Role[] = [
         tags: [
             { label: "Client Relations", color: "emerald" },
             { label: "Sales", color: "amber" },
-            { label: "Full-time", color: "violet" },
+            { label: "Freelance", color: "violet" },
         ],
     },
     {
@@ -91,7 +91,7 @@ export const ROLES: Role[] = [
         tags: [
             { label: "Production", color: "pink" },
             { label: "Camera", color: "violet" },
-            { label: "On-site", color: "amber" },
+            { label: "Freelance", color: "amber" },
         ],
     },
     {

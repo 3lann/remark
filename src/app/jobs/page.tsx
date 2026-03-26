@@ -38,7 +38,7 @@ function JobCard({ role, i, t, router, isActive = true, expanded = false, onExpa
     const triggerAssistant = () => {
         if (expanded) return;
         const textEn = `Great choice! Any questions about the ${role.title} role? 💼`;
-        const textAr = `اختيار رائع! هل لديك استفسار عن وظيفة ${localized.title}؟ 💼`;
+        const textAr = `اختيار رائع! هل لديك استفسار عن فرصة ${localized.title}؟ 💼`;
 
         window.dispatchEvent(
             new CustomEvent("assistant-message", {
@@ -223,13 +223,13 @@ export default function CareersPage() {
                 await new Promise(r => setTimeout(r, 1000));
 
                 window.dispatchEvent(new CustomEvent("assistant-message", {
-                    detail: { text: "هنا يمكنك تصفح جميع الوظائف المتاحة والانطلاق نحو المستقبل.", delay: 0 }
+                    detail: { text: "هنا يمكنك تصفح جميع فرص العمل الحر المتاحة والانطلاق نحو المستقبل.", delay: 0 }
                 }));
                 await new Promise(r => setTimeout(r, 2200));
 
                 // Explain Swipe
                 window.dispatchEvent(new CustomEvent("assistant-message", {
-                    detail: { text: "اسحب يميناً ويساراً لرؤية بقية الوظائف واختيار الأنسب لك! 👋", delay: 0 }
+                    detail: { text: "اسحب يميناً ويساراً لرؤية بقية الفرص واختيار الأنسب لك! 👋", delay: 0 }
                 }));
                 await new Promise(r => setTimeout(r, 1200));
 
@@ -251,7 +251,7 @@ export default function CareersPage() {
                 }
 
                 window.dispatchEvent(new CustomEvent("assistant-message", {
-                    detail: { text: "لندخل الآن على أول وظيفة لتجربة التقديم! 💼", delay: 0 }
+                    detail: { text: "لندخل الآن على أول فرصة لتجربة التقديم! 💼", delay: 0 }
                 }));
                 await new Promise(r => setTimeout(r, 2400));
 
@@ -378,7 +378,7 @@ export default function CareersPage() {
                                     <div className="glass px-4 py-3 rounded-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl flex items-center gap-3">
                                         <div className="w-8 h-8 rounded-full bg-violet-500/20 flex items-center justify-center text-sm">✨</div>
                                         <div>
-                                            <div className="text-xs text-white/50 font-medium mb-0.5">{dir === 'rtl' ? "انضم لفريقنا" : "Join the Team"}</div>
+                                        <div className="text-xs text-white/50 font-medium mb-0.5">{dir === 'rtl' ? "فرص عمل حر" : "Freelance With Us"}</div>
                                             <div className="text-sm font-bold text-white leading-none">{dir === 'rtl' ? "بيئة إبداعية" : "Creative Environment"}</div>
                                         </div>
                                     </div>

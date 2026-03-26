@@ -20,30 +20,30 @@ function getMockReply(input: string, lang: "ar" | "en"): string {
     const q = input.toLowerCase();
     if (lang === "ar") {
         if (q.includes("وظيف") || q.includes("شاغر") || q.includes("عمل"))
-            return "لدينا حالياً 9 وظائف شاغرة تشمل: مدير تسويق، منسّق تسويق، أخصائي سوشال ميديا، ميديا باير، مدير إبداعي، كاتب محتوى، مدير حسابات، مصوّر فيديو، ومونتير. يمكنك تصفّح التفاصيل بالأسفل والتقديم مباشرة! 🎯";
+            return "لدينا حالياً 9 فرص عمل حر تشمل: مدير تسويق، منسّق تسويق، أخصائي سوشال ميديا، ميديا باير، مدير إبداعي، كاتب محتوى، مدير حسابات، مصوّر فيديو، ومونتير. يمكنك تصفّح التفاصيل بالأسفل والتقديم مباشرة! 🎯";
         if (q.includes("رات") || q.includes("دخل") || q.includes("معاش"))
-            return "الرواتب تنافسية وتُحدد حسب الخبرة والمؤهلات. نقدم حزمة شاملة تتضمن: راتب أساسي + بونص أداء + تأمين صحي. للتفاصيل الدقيقة، قدّم على الوظيفة وسنتواصل معك. 💼";
+            return "الأسعار تُحدد حسب المشروع والخبرة. نعمل بنظام العمل الحر (Freelance) مع أسعار تنافسية. للتفاصيل الدقيقة، قدّم على الفرصة وسنتواصل معك. 💼";
         if (q.includes("شرك") || q.includes("ريمارك") || q.includes("remark") || q.includes("عنك"))
             return "Remark هي وكالة تسويق رقمي متخصصة في إنتاج المحتوى الإبداعي، إدارة الحملات الإعلانية، والتسويق عبر وسائل التواصل الاجتماعي. فريقنا يعمل عن بُعد من مختلف أنحاء العالم! 🌍";
         if (q.includes("تقد") || q.includes("ارسل") || q.includes("سيرة") || q.includes("كيف اقدم"))
-            return "التقديم سهل وسريع! اختَر الوظيفة المناسبة من القائمة، اضغط 'قدّم الآن'، واملأ بياناتك الشخصية مع رفع سيرتك الذاتية (PDF). سنتواصل معك خلال أيام عمل قليلة. ✨";
+            return "التقديم سهل وسريع! اختَر التخصص المناسب من القائمة، اضغط 'قدّم الآن'، واملأ بياناتك الشخصية مع رفع سيرتك الذاتية (PDF). سنتواصل معك خلال أيام عمل قليلة. ✨";
         if (q.includes("عن بعد") || q.includes("مكان") || q.includes("موقع") || q.includes("remote"))
             return "نعم! العمل لدينا عن بُعد بالكامل 🏠. يمكنك العمل من أي مكان في العالم. نستخدم أدوات تواصل حديثة لضمان التنسيق بين الفريق.";
         if (q.includes("خبر") || q.includes("مهار") || q.includes("شرط") || q.includes("متطلب"))
-            return "المتطلبات تختلف حسب الوظيفة. بشكل عام نبحث عن: شغف بالتسويق الرقمي، مهارات تواصل ممتازة، وقدرة على العمل ضمن فريق. تفاصيل كل وظيفة موجودة في بطاقتها أدناه. 📋";
-        return "شكراً لسؤالك! 😊 يمكنني مساعدتك بأي استفسار عن Remark أو الوظائف المتاحة. ماذا تود أن تعرف؟";
+            return "المتطلبات تختلف حسب التخصص. بشكل عام نبحث عن: شغف بالتسويق الرقمي، مهارات تواصل ممتازة، وقدرة على العمل المستقل. تفاصيل كل فرصة موجودة في بطاقتها أدناه. 📋";
+        return "شكراً لسؤالك! 😊 يمكنني مساعدتك بأي استفسار عن Remark أو فرص العمل الحر المتاحة. ماذا تود أن تعرف؟";
     }
-    if (q.includes("job") || q.includes("position") || q.includes("opening"))
-        return "We have 9 open positions including: Marketing Manager, Coordinator, Social Media Specialist, Media Buyer, Creative Director, Copywriter, Account Manager, Videographer, and Video Editor. Browse below and apply! 🎯";
-    if (q.includes("salary") || q.includes("pay") || q.includes("compensation"))
-        return "We offer competitive compensation based on experience: base salary + performance bonus + health insurance. Apply and we'll discuss details during the interview! 💼";
+    if (q.includes("job") || q.includes("position") || q.includes("opening") || q.includes("freelance"))
+        return "We have 9 freelance opportunities including: Marketing Manager, Coordinator, Social Media Specialist, Media Buyer, Creative Director, Copywriter, Account Manager, Videographer, and Video Editor. Browse below and apply! 🎯";
+    if (q.includes("salary") || q.includes("pay") || q.includes("compensation") || q.includes("rate") || q.includes("budget"))
+        return "We work on a freelance basis with competitive project-based or hourly rates. Apply for the opportunity and we'll discuss the details! 💼";
     if (q.includes("company") || q.includes("remark") || q.includes("about"))
         return "Remark is a leading digital marketing agency specializing in creative content, ad campaign management, and social media marketing. Our team works remotely worldwide! 🌍";
     if (q.includes("apply") || q.includes("how") || q.includes("submit"))
-        return "Easy! Pick a position below, click 'Apply Now', fill in your details and upload your CV (PDF). We'll get back to you within a few business days. ✨";
+        return "Easy! Pick a freelance opportunity below, click 'Apply Now', fill in your details and upload your CV (PDF). We'll get back to you within a few business days. ✨";
     if (q.includes("remote") || q.includes("location") || q.includes("where"))
         return "Yes! We're fully remote 🏠. Work from anywhere in the world. We use modern tools for seamless team collaboration.";
-    return "Thanks for your question! 😊 I can help with anything about Remark or our open positions. What would you like to know?";
+    return "Thanks for your question! 😊 I can help with anything about Remark or our freelance opportunities. What would you like to know?";
 }
 
 export default function FloatingAssistant() {

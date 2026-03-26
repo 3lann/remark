@@ -25,13 +25,13 @@ export default function DemoScript() {
 
                 // 3. Third message: Direct to jobs
                 window.dispatchEvent(new CustomEvent("assistant-message", {
-                    detail: { text: "اليوم راح أشرح لكم أسهل طريقة للتقديم على وظيفة معنا في ثواني معدودة. 💼", delay: 0 }
+                    detail: { text: "اليوم راح أشرح لكم أسهل طريقة للتقديم كفري لانس معنا في ثواني معدودة. 💼", delay: 0 }
                 }));
                 await new Promise(r => setTimeout(r, 3200));
 
                 // 4. Fourth message: Click action 
                 window.dispatchEvent(new CustomEvent("assistant-message", {
-                    detail: { text: "كل اللي عليك تسويه هو الضغط على زر 'الوظائف' لمشاهدة واختيار دورك المستقبلي.", delay: 0 }
+                    detail: { text: "كل اللي عليك تسويه هو الضغط على زر 'فرص العمل الحر' لمشاهدة واختيار تخصصك.", delay: 0 }
                 }));
                 await new Promise(r => setTimeout(r, 2800));
 
