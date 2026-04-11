@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remark - Instagram Templates (English)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            padding: 40px;
+            font-family: 'Tajawal', 'Inter', sans-serif;
+        }
+
+        .label {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        /* ═══════════════════════════════════════════
+           PAGE 1: INSTAGRAM STORY (1080 × 1920)
+           ═══════════════════════════════════════════ */
+        .story {
+            width: 1080px;
+            height: 1920px;
+            background: #080816;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            page-break-after: always;
+        }
+
+        /* ═══════════════════════════════════════════
+           PAGE 2: INSTAGRAM POST (1080 × 1080)
+           ═══════════════════════════════════════════ */
+        .post {
+            width: 1080px;
+            height: 1080px;
+            background: #080816;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            page-break-after: always;
+        }
+
+        /* ═══════════════════════════════════════════
+           PAGE 3: STORY - ROLES DETAIL
+           ═══════════════════════════════════════════ */
+        .story-roles {
+            width: 1080px;
+            height: 1920px;
+            background: #080816;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            page-break-after: always;
+        }
+
+        /* ── Shared: Ambient Glows ── */
+        .glow-violet {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+            filter: blur(120px);
+            pointer-events: none;
+        }
+
+        .glow-cyan {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        .glow-pink {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        /* ── Hex pattern overlay ── */
+        .hex-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='28' height='49' viewBox='0 0 28 49' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgba(230,237,247,0.04)' fill-rule='evenodd'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.65V49h-2z' /%3E%3C/g%3E%3C/svg%3E");
+            background-size: 22px;
+            opacity: 1;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ── Top gradient line ── */
+        .top-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.8), rgba(6, 182, 212, 0.8), transparent);
+            z-index: 10;
+        }
+
+        /* ── Bottom gradient line ── */
+        .bottom-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.8), rgba(139, 92, 246, 0.8), transparent);
+            z-index: 10;
+        }
+
+        /* ── Glass card ── */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+        }
+
+        /* ── Badge pill ── */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+        }
+
+        /* ── Gradient text ── */
+        .gradient-text {
+            background: linear-gradient(135deg, #c4b5fd, #818cf8, #67e8f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ── Role card (for story roles) ── */
+        .role-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+        }
+
+        .role-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .role-title {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .role-desc {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 4px;
+            letter-spacing: 0;
+            line-height: 1.4;
+        }
+
+        /* ── Crystal orb decoration ── */
+        .crystal-hex {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(from 0deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.25), rgba(139, 92, 246, 0.3));
+            clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* ── Logo container ── */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* ── Stat item ── */
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: 0;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 4px;
+            letter-spacing: 0;
+        }
+
+        /* ── CTA Button ── */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 60px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.9));
+            color: #080816;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 0;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ── Footer info ── */
+        .footer-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+
+        /* ── Decorative circles ── */
+        .deco-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            pointer-events: none;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                gap: 0;
+            }
+
+            .label {
+                display: none;
+            }
+
+            .story,
+            .post,
+            .story-roles {
+                border-radius: 0;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+        }
+
+        @page {
+            size: auto;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════
+     PAGE 1: INSTAGRAM STORY — "فرص عمل حر" (1080 × 1920)
+     ═══════════════════════════════════════════════════════ -->
+    <div class="label">Instagram Story — 1080 × 1920</div>
+    <div class="story">
+        <!-- Ambient glows -->
+        <div class="glow-violet" style="top: 5%; right: -10%;"></div>
+        <div class="glow-cyan" style="top: 45%; left: -15%;"></div>
+        <div class="glow-pink" style="bottom: 10%; right: 10%;"></div>
+        <div class="glow-violet" style="bottom: -5%; left: -5%; width: 400px; height: 400px; opacity: 0.5;"></div>
+
+        <!-- Hex pattern -->
+        <div class="hex-overlay"></div>
+
+        <!-- Top & bottom lines -->
+        <div class="top-line"></div>
+        <div class="bottom-line"></div>
+
+        <!-- Decorative rings -->
+        <div class="deco-ring" style="top: 60px; left: -80px; width: 300px; height: 300px;"></div>
+        <div class="deco-ring"
+            style="bottom: 120px; right: -60px; width: 250px; height: 250px; border-color: rgba(6, 182, 212, 0.08);">
+        </div>
+
+        <!-- Crystal hex -->
+        <div class="crystal-hex" style="top: 100px; left: 80px; width: 140px; height: 140px; opacity: 0.2;"></div>
+
+        <!-- Content -->
+        <div
+            style="position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; height: 100%; padding: 80px 70px;">
+
+            <!-- Logo -->
+            <div style="margin-top: 40px;">
+                <svg width="280" height="55" viewBox="60 440 960 200" xmlns="http://www.w3.org/2000/svg"
+                    style="filter: drop-shadow(0 0 20px rgba(139,92,246,0.3));">
+                    <path fill="#ffffff"
+                        d="M 71 620.869995 L 71 459.429993 L 101.690002 459.429993 L 101.690002 484.190002 L 104.059998 484.190002 C 106.330002 476.179993 111.550003 469.609985 119.699997 464.469971 C 127.849998 459.329956 137.169998 456.76001 147.639999 456.76001 C 153.669998 456.76001 158.410004 457.209961 161.869995 458.089966 L 161.869995 489.52002 C 158.01001 488.23999 152.089996 487.589966 144.080002 487.589966 C 131.919998 487.589966 122.010002 491.099976 114.360001 498.109985 C 106.699997 505.130005 102.870003 514.27002 102.870003 525.540039 L 102.870003 620.859985 L 71 620.859985 Z" />
+                    <path fill="#ffffff"
+                        d="M 281.809998 577.280029 L 312.5 577.280029 C 308.839996 591.809998 300.869995 603.219971 288.559998 611.530029 C 276.259979 619.830017 260.919983 623.97998 242.529999 623.97998 C 219.399994 623.97998 201.190002 616.539978 187.899994 601.669983 C 174.610001 586.789978 167.960007 566.459961 167.960007 540.660034 C 167.960007 514.859985 174.679993 494.359985 188.119995 479.140015 C 201.559998 463.920044 219.639999 456.309998 242.380005 456.309998 C 265.119995 456.309998 282.429993 463.530029 295.230011 477.959961 C 308.029999 492.390015 314.429993 512.299988 314.429993 537.700012 L 314.429993 548.820007 L 200.419998 548.820007 L 200.419998 550.599976 C 200.919998 564.829956 205.020004 576.099976 212.720001 584.400024 C 220.429993 592.700012 230.660004 596.849976 243.410004 596.849976 C 262.880005 596.849976 275.679993 590.330017 281.809998 577.280029 M 270.619995 494.780029 C 263.449982 487.219971 253.990005 483.440002 242.229996 483.440002 C 230.470001 483.440002 220.779999 487.25 213.169998 494.859985 C 205.559998 502.469971 201.309998 512.599976 200.419998 525.25 L 281.959991 525.25 C 281.559998 512.5 277.779999 502.349976 270.619995 494.780029" />
+                    <path fill="#ffffff"
+                        d="M 340.230011 620.869995 L 340.230011 459.429993 L 370.920013 459.429993 L 370.920013 485.369995 L 373.290009 485.369995 C 376.850006 476.179993 382.559998 469.040039 390.410004 463.950012 C 398.269989 458.859985 407.529999 456.320007 418.209991 456.320007 C 428.890015 456.320007 438.170013 458.890015 445.779999 464.030029 C 453.390015 469.170044 459.019989 476.280029 462.679993 485.380005 L 465.200012 485.380005 C 469.350006 476.48999 475.799988 469.420044 484.549988 464.179993 C 493.299988 458.940002 503.209991 456.320007 514.280029 456.320007 C 530.590027 456.320007 543.26001 461.01001 552.299988 470.400024 C 561.340027 479.790039 565.869995 492.890015 565.869995 509.690002 L 565.869995 620.880005 L 534 620.880005 L 534 518 C 534 496.349976 523.570007 485.530029 502.720001 485.530029 C 492.540009 485.530029 484.309998 488.73999 478.040009 495.160034 C 471.76001 501.589966 468.619995 509.640015 468.619995 519.329956 L 468.619995 620.880005 L 437.339996 620.880005 L 437.339996 514.880005 C 437.339996 505.790039 434.519989 498.619995 428.890015 493.380005 C 423.26001 488.140015 415.700012 485.52002 406.209991 485.52002 C 396.720001 485.52002 388.420013 489.030029 381.899994 496.040039 C 375.380005 503.059998 372.109985 511.75 372.109985 522.130005 L 372.109985 620.859985 L 340.23999 620.859985 Z" />
+                    <path fill="#ffffff"
+                        d="M 642.809998 623.539978 C 627 623.539978 614.070007 619.119995 604.039978 610.27002 C 594.01001 601.419983 588.98999 589.73999 588.98999 575.210022 C 588.98999 560.679993 594.179993 549.440002 604.549988 541.190002 C 614.929993 532.940002 629.75 528.219971 649.030029 527.030029 L 692.76001 524.51001 L 692.76001 510.579956 C 692.76001 501.97998 689.940002 495.380005 684.309998 490.790039 C 678.679993 486.190002 670.469971 483.900024 659.700012 483.900024 C 650.799988 483.900024 643.409973 485.459961 637.539978 488.570007 C 631.659973 491.679993 627.820007 496.109985 626.049988 501.839966 L 595.210022 501.839966 C 596.789978 488.01001 603.580017 476.959961 615.590027 468.709961 C 627.599976 460.459961 642.799988 456.329956 661.179993 456.329956 C 681.340027 456.329956 696.929993 461.099976 707.950012 470.630005 C 718.969971 480.170044 724.47998 493.48999 724.47998 510.589966 L 724.47998 620.890015 L 693.789978 620.890015 L 693.789978 598.210022 L 691.27002 598.210022 C 686.429993 606.320007 679.780029 612.570007 671.330017 616.960022 C 662.880005 621.359985 653.369995 623.559998 642.789978 623.559998 M 650.940002 596.72998 C 662.900024 596.72998 672.859985 593.369995 680.809998 586.650024 C 688.76001 579.929993 692.73999 571.530029 692.73999 561.450012 L 692.73999 547.959961 L 653.299988 550.47998 C 642.22998 551.170044 634.080017 553.440002 628.840027 557.299988 C 623.599976 561.160034 620.98999 566.640015 620.98999 573.76001 C 620.98999 580.880005 623.75 586.48999 629.289978 590.590027 C 634.830017 594.690002 642.039978 596.73999 650.940002 596.73999" />
+                    <path fill="#ffffff"
+                        d="M 757.409973 620.869995 L 757.409973 459.429993 L 788.099976 459.429993 L 788.099976 484.190002 L 790.469971 484.190002 C 792.73999 476.179993 797.960022 469.609985 806.109985 464.469971 C 814.26001 459.329956 823.580017 456.76001 834.049988 456.76001 C 840.080017 456.76001 844.820007 457.209961 848.280029 458.089966 L 848.280029 489.52002 C 844.419983 488.23999 838.5 487.589966 830.48999 487.589966 C 818.330017 487.589966 808.419983 491.099976 800.77002 498.109985 C 793.109985 505.130005 789.280029 514.27002 789.280029 525.540039 L 789.280029 620.859985 L 757.409973 620.859985 Z" />
+                    <path fill="#ffffff"
+                        d="M 902.409973 526.72998 L 966.450012 459.420044 L 1004.109985 459.420044 L 937.690002 528.650024 L 1008.549988 620.869995 L 969.409973 620.869995 L 913.969971 549.709961 L 899.880005 563.049988 L 899.880005 620.869995 L 868.01001 620.869995 L 868.01001 456.75 L 899.880005 456.309998 L 899.880005 526.72998 L 902.409973 526.72998 Z" />
+                </svg>
+            </div>
+
+            <!-- spacer after logo -->
+            <div style="margin-top: 20px;"></div>
+
+            <!-- Badge -->
+            <div style="margin-top: 60px;">
+                <div class="badge">
+                    <span class="dot"></span>
+                    FREELANCE OPPORTUNITIES
+                </div>
+            </div>
+
+            <!-- Main title -->
+            <div style="margin-top: 60px; text-align: center;">
+                <div style="font-size: 72px; font-weight: 900; color: #fff; line-height: 1.2; letter-spacing: 0;">
+                    Freelance
+                </div>
+                <div style="font-size: 72px; font-weight: 900; line-height: 1.2; letter-spacing: 0;"
+                    class="gradient-text">
+                    With Us
+                </div>
+            </div>
+
+            <!-- Subtitle -->
+            <div
+                style="margin-top: 40px; text-align: center; color: rgba(255,255,255,0.5); font-size: 28px; font-weight: 500; line-height: 1.7; max-width: 800px; letter-spacing: 0;">
+                We're building something extraordinary. Collaborate with our creative team as a freelancer.
+            </div>
+
+            <!-- Stats row -->
+            <div style="margin-top: 70px; display: flex; gap: 70px; align-items: center;">
+                <div class="stat-item">
+                    <div class="stat-value gradient-text">9+</div>
+                    <div class="stat-label">Opportunities</div>
+                </div>
+                <div
+                    style="width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.15), transparent);">
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value gradient-text">Remote</div>
+                    <div class="stat-label">Flexible Work</div>
+                </div>
+                <div
+                    style="width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.15), transparent);">
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value gradient-text">Fast</div>
+                    <div class="stat-label">Growth</div>
+                </div>
+            </div>
+
+            <!-- Roles preview -->
+            <div
+                style="margin-top: 70px; width: 100%; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
+                <span
+                    style="padding: 12px 24px; border-radius: 999px; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.2); color: rgba(255,255,255,0.7); font-size: 20px; font-weight: 700; letter-spacing: 0;">Marketing Manager</span>
+                <span
+                    style="padding: 12px 24px; border-radius: 999px; background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.2); color: rgba(255,255,255,0.7); font-size: 20px; font-weight: 700; letter-spacing: 0;">Creative Director</span>
+                <span
+                    style="padding: 12px 24px; border-radius: 999px; background: rgba(236,72,153,0.12); border: 1px solid rgba(236,72,153,0.2); color: rgba(255,255,255,0.7); font-size: 20px; font-weight: 700; letter-spacing: 0;">Media Buyer</span>
+                <span
+                    style="padding: 12px 24px; border-radius: 999px; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.2); color: rgba(255,255,255,0.7); font-size: 20px; font-weight: 700; letter-spacing: 0;">Videographer</span>
+                <span
+                    style="padding: 12px 24px; border-radius: 999px; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.2); color: rgba(255,255,255,0.7); font-size: 20px; font-weight: 700; letter-spacing: 0;">Video Editor</span>
+                <span
+                    style="padding: 12px 24px; border-radius: 999px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.2); color: rgba(255,255,255,0.7); font-size: 20px; font-weight: 700; letter-spacing: 0;">+4 More</span>
+            </div>
+
+            <!-- CTA -->
+            <div
+                style="margin-top: auto; margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; gap: 30px;">
+                <div class="cta-btn">Apply Now →</div>
+                <div class="footer-info">
+                    <span>@remark.iq</span>
+                    <span style="color: rgba(139,92,246,0.4);">•</span>
+                    <span>remark-agency.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+     PAGE 2: INSTAGRAM POST — "اعمل معنا" (1080 × 1080)
+     ═══════════════════════════════════════════════════════ -->
+    <div class="label">Instagram Post — 1080 × 1080</div>
+    <div class="post">
+        <!-- Ambient glows -->
+        <div class="glow-violet" style="top: -15%; right: -10%; width: 500px; height: 500px;"></div>
+        <div class="glow-cyan" style="bottom: -10%; left: -10%; width: 450px; height: 450px;"></div>
+        <div class="glow-pink"
+            style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; opacity: 0.5;">
+        </div>
+
+        <!-- Hex pattern -->
+        <div class="hex-overlay"></div>
+
+        <!-- Lines -->
+        <div class="top-line"></div>
+        <div class="bottom-line"></div>
+
+        <!-- Deco rings -->
+        <div class="deco-ring" style="top: -40px; left: -40px; width: 200px; height: 200px;"></div>
+        <div class="deco-ring"
+            style="bottom: -30px; right: -50px; width: 180px; height: 180px; border-color: rgba(6,182,212,0.1);"></div>
+
+        <!-- Crystal hex -->
+        <div class="crystal-hex" style="bottom: 60px; right: 60px; width: 100px; height: 100px; opacity: 0.15;"></div>
+
+        <!-- Content -->
+        <div
+            style="position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; height: 100%; padding: 60px 70px;">
+
+            <!-- Header row: Logo + Badge -->
+            <div style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 18px;">
+                    <svg width="140" height="28" viewBox="60 440 960 200" xmlns="http://www.w3.org/2000/svg"
+                        style="filter: drop-shadow(0 0 12px rgba(139,92,246,0.3));">
+                        <path fill="#ffffff"
+                            d="M 71 620.87 L 71 459.43 L 101.69 459.43 L 101.69 484.19 L 104.06 484.19 C 106.33 476.18 111.55 469.61 119.7 464.47 C 127.85 459.33 137.17 456.76 147.64 456.76 C 153.67 456.76 158.41 457.21 161.87 458.09 L 161.87 489.52 C 158.01 488.24 152.09 487.59 144.08 487.59 C 131.92 487.59 122.01 491.1 114.36 498.11 C 106.7 505.13 102.87 514.27 102.87 525.54 L 102.87 620.86 L 71 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 281.81 577.28 L 312.5 577.28 C 308.84 591.81 300.87 603.22 288.56 611.53 C 276.26 619.83 260.92 623.98 242.53 623.98 C 219.4 623.98 201.19 616.54 187.9 601.67 C 174.61 586.79 167.96 566.46 167.96 540.66 C 167.96 514.86 174.68 494.36 188.12 479.14 C 201.56 463.92 219.64 456.31 242.38 456.31 C 265.12 456.31 282.43 463.53 295.23 477.96 C 308.03 492.39 314.43 512.3 314.43 537.7 L 314.43 548.82 L 200.42 548.82 L 200.42 550.6 C 200.92 564.83 205.02 576.1 212.72 584.4 C 220.43 592.7 230.66 596.85 243.41 596.85 C 262.88 596.85 275.68 590.33 281.81 577.28 M 270.62 494.78 C 263.45 487.22 253.99 483.44 242.23 483.44 C 230.47 483.44 220.78 487.25 213.17 494.86 C 205.56 502.47 201.31 512.6 200.42 525.25 L 281.96 525.25 C 281.56 512.5 277.78 502.35 270.62 494.78" />
+                        <path fill="#ffffff"
+                            d="M 340.23 620.87 L 340.23 459.43 L 370.92 459.43 L 370.92 485.37 L 373.29 485.37 C 376.85 476.18 382.56 469.04 390.41 463.95 C 398.27 458.86 407.53 456.32 418.21 456.32 C 428.89 456.32 438.17 458.89 445.78 464.03 C 453.39 469.17 459.02 476.28 462.68 485.38 L 465.2 485.38 C 469.35 476.49 475.8 469.42 484.55 464.18 C 493.3 458.94 503.21 456.32 514.28 456.32 C 530.59 456.32 543.26 461.01 552.3 470.4 C 561.34 479.79 565.87 492.89 565.87 509.69 L 565.87 620.88 L 534 620.88 L 534 518 C 534 496.35 523.57 485.53 502.72 485.53 C 492.54 485.53 484.31 488.74 478.04 495.16 C 471.76 501.59 468.62 509.64 468.62 519.33 L 468.62 620.88 L 437.34 620.88 L 437.34 514.88 C 437.34 505.79 434.52 498.62 428.89 493.38 C 423.26 488.14 415.7 485.52 406.21 485.52 C 396.72 485.52 388.42 489.03 381.9 496.04 C 375.38 503.06 372.11 511.75 372.11 522.13 L 372.11 620.86 L 340.24 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 642.81 623.54 C 627 623.54 614.07 619.12 604.04 610.27 C 594.01 601.42 588.99 589.74 588.99 575.21 C 588.99 560.68 594.18 549.44 604.55 541.19 C 614.93 532.94 629.75 528.22 649.03 527.03 L 692.76 524.51 L 692.76 510.58 C 692.76 501.98 689.94 495.38 684.31 490.79 C 678.68 486.19 670.47 483.9 659.7 483.9 C 650.8 483.9 643.41 485.46 637.54 488.57 C 631.66 491.68 627.82 496.11 626.05 501.84 L 595.21 501.84 C 596.79 488.01 603.58 476.96 615.59 468.71 C 627.6 460.46 642.8 456.33 661.18 456.33 C 681.34 456.33 696.93 461.1 707.95 470.63 C 718.97 480.17 724.48 493.49 724.48 510.59 L 724.48 620.89 L 693.79 620.89 L 693.79 598.21 L 691.27 598.21 C 686.43 606.32 679.78 612.57 671.33 616.96 C 662.88 621.36 653.37 623.56 642.79 623.56 M 650.94 596.73 C 662.9 596.73 672.86 593.37 680.81 586.65 C 688.76 579.93 692.74 571.53 692.74 561.45 L 692.74 547.96 L 653.3 550.48 C 642.23 551.17 634.08 553.44 628.84 557.3 C 623.6 561.16 620.99 566.64 620.99 573.76 C 620.99 580.88 623.75 586.49 629.29 590.59 C 634.83 594.69 642.04 596.74 650.94 596.74" />
+                        <path fill="#ffffff"
+                            d="M 757.41 620.87 L 757.41 459.43 L 788.1 459.43 L 788.1 484.19 L 790.47 484.19 C 792.74 476.18 797.96 469.61 806.11 464.47 C 814.26 459.33 823.58 456.76 834.05 456.76 C 840.08 456.76 844.82 457.21 848.28 458.09 L 848.28 489.52 C 844.42 488.24 838.5 487.59 830.49 487.59 C 818.33 487.59 808.42 491.1 800.77 498.11 C 793.11 505.13 789.28 514.27 789.28 525.54 L 789.28 620.86 L 757.41 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 902.41 526.73 L 966.45 459.42 L 1004.11 459.42 L 937.69 528.65 L 1008.55 620.87 L 969.41 620.87 L 913.97 549.71 L 899.88 563.05 L 899.88 620.87 L 868.01 620.87 L 868.01 456.75 L 899.88 456.31 L 899.88 526.73 L 902.41 526.73 Z" />
+                    </svg>
+                </div>
+                <div class="badge" style="font-size: 18px; padding: 10px 22px;">
+                    <span class="dot" style="width: 8px; height: 8px;"></span>
+                    FREELANCE OPPORTUNITIES
+                </div>
+            </div>
+
+            <!-- Main title -->
+            <div style="margin-top: 50px; text-align: center;">
+                <div style="font-size: 70px; font-weight: 900; color: #fff; line-height: 1.15; letter-spacing: 0;">
+                    Freelance
+                </div>
+                <div style="font-size: 70px; font-weight: 900; line-height: 1.15; letter-spacing: 0;"
+                    class="gradient-text">
+                    With Us
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div
+                style="margin-top: 30px; text-align: center; color: rgba(255,255,255,0.45); font-size: 26px; font-weight: 500; line-height: 1.7; max-width: 800px; letter-spacing: 0;">
+                Business Development × AI Solutions × Creative Production
+            </div>
+
+            <!-- Roles grid -->
+            <div style="margin-top: 45px; width: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">📈</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Marketing Manager</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">📋</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Marketing Coordinator</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">📱</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Social Media</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">📊</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Media Buyer</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">🎨</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Creative Director</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">✍️</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Copywriter</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">🤝</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Account Manager</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">🎬</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Videographer</div>
+                </div>
+                <div class="glass-card" style="padding: 22px 18px; text-align: center;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">🎞️</div>
+                    <div style="color: rgba(255,255,255,0.85); font-size: 19px; font-weight: 800; letter-spacing: 0;">
+                        Video Editor</div>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div
+                style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                <div class="footer-info" style="font-size: 18px;">
+                    <span>@remark.iq</span>
+                </div>
+                <div class="cta-btn" style="padding: 16px 40px; font-size: 22px;">Apply Now</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+     PAGE 3: STORY — ROLES DETAIL (1080 × 1920)
+     ═══════════════════════════════════════════════════════ -->
+    <div class="label">Instagram Story — Roles Detail — 1080 × 1920</div>
+    <div class="story-roles">
+        <!-- Ambient glows -->
+        <div class="glow-violet" style="top: -5%; left: -10%;"></div>
+        <div class="glow-cyan" style="bottom: 20%; right: -15%; width: 400px; height: 400px;"></div>
+        <div class="glow-pink" style="top: 40%; right: 5%; width: 350px; height: 350px; opacity: 0.4;"></div>
+
+        <!-- Hex pattern -->
+        <div class="hex-overlay"></div>
+
+        <!-- Lines -->
+        <div class="top-line"></div>
+        <div class="bottom-line"></div>
+
+        <!-- Content -->
+        <div
+            style="position: relative; z-index: 5; display: flex; flex-direction: column; height: 100%; padding: 70px 60px;">
+
+            <!-- Header -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 50px;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <svg width="120" height="24" viewBox="60 440 960 200" xmlns="http://www.w3.org/2000/svg"
+                        style="filter: drop-shadow(0 0 12px rgba(139,92,246,0.3));">
+                        <path fill="#ffffff"
+                            d="M 71 620.87 L 71 459.43 L 101.69 459.43 L 101.69 484.19 L 104.06 484.19 C 106.33 476.18 111.55 469.61 119.7 464.47 C 127.85 459.33 137.17 456.76 147.64 456.76 C 153.67 456.76 158.41 457.21 161.87 458.09 L 161.87 489.52 C 158.01 488.24 152.09 487.59 144.08 487.59 C 131.92 487.59 122.01 491.1 114.36 498.11 C 106.7 505.13 102.87 514.27 102.87 525.54 L 102.87 620.86 L 71 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 281.81 577.28 L 312.5 577.28 C 308.84 591.81 300.87 603.22 288.56 611.53 C 276.26 619.83 260.92 623.98 242.53 623.98 C 219.4 623.98 201.19 616.54 187.9 601.67 C 174.61 586.79 167.96 566.46 167.96 540.66 C 167.96 514.86 174.68 494.36 188.12 479.14 C 201.56 463.92 219.64 456.31 242.38 456.31 C 265.12 456.31 282.43 463.53 295.23 477.96 C 308.03 492.39 314.43 512.3 314.43 537.7 L 314.43 548.82 L 200.42 548.82 L 200.42 550.6 C 200.92 564.83 205.02 576.1 212.72 584.4 C 220.43 592.7 230.66 596.85 243.41 596.85 C 262.88 596.85 275.68 590.33 281.81 577.28 M 270.62 494.78 C 263.45 487.22 253.99 483.44 242.23 483.44 C 230.47 483.44 220.78 487.25 213.17 494.86 C 205.56 502.47 201.31 512.6 200.42 525.25 L 281.96 525.25 C 281.56 512.5 277.78 502.35 270.62 494.78" />
+                        <path fill="#ffffff"
+                            d="M 340.23 620.87 L 340.23 459.43 L 370.92 459.43 L 370.92 485.37 L 373.29 485.37 C 376.85 476.18 382.56 469.04 390.41 463.95 C 398.27 458.86 407.53 456.32 418.21 456.32 C 428.89 456.32 438.17 458.89 445.78 464.03 C 453.39 469.17 459.02 476.28 462.68 485.38 L 465.2 485.38 C 469.35 476.49 475.8 469.42 484.55 464.18 C 493.3 458.94 503.21 456.32 514.28 456.32 C 530.59 456.32 543.26 461.01 552.3 470.4 C 561.34 479.79 565.87 492.89 565.87 509.69 L 565.87 620.88 L 534 620.88 L 534 518 C 534 496.35 523.57 485.53 502.72 485.53 C 492.54 485.53 484.31 488.74 478.04 495.16 C 471.76 501.59 468.62 509.64 468.62 519.33 L 468.62 620.88 L 437.34 620.88 L 437.34 514.88 C 437.34 505.79 434.52 498.62 428.89 493.38 C 423.26 488.14 415.7 485.52 406.21 485.52 C 396.72 485.52 388.42 489.03 381.9 496.04 C 375.38 503.06 372.11 511.75 372.11 522.13 L 372.11 620.86 L 340.24 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 642.81 623.54 C 627 623.54 614.07 619.12 604.04 610.27 C 594.01 601.42 588.99 589.74 588.99 575.21 C 588.99 560.68 594.18 549.44 604.55 541.19 C 614.93 532.94 629.75 528.22 649.03 527.03 L 692.76 524.51 L 692.76 510.58 C 692.76 501.98 689.94 495.38 684.31 490.79 C 678.68 486.19 670.47 483.9 659.7 483.9 C 650.8 483.9 643.41 485.46 637.54 488.57 C 631.66 491.68 627.82 496.11 626.05 501.84 L 595.21 501.84 C 596.79 488.01 603.58 476.96 615.59 468.71 C 627.6 460.46 642.8 456.33 661.18 456.33 C 681.34 456.33 696.93 461.1 707.95 470.63 C 718.97 480.17 724.48 493.49 724.48 510.59 L 724.48 620.89 L 693.79 620.89 L 693.79 598.21 L 691.27 598.21 C 686.43 606.32 679.78 612.57 671.33 616.96 C 662.88 621.36 653.37 623.56 642.79 623.56 M 650.94 596.73 C 662.9 596.73 672.86 593.37 680.81 586.65 C 688.76 579.93 692.74 571.53 692.74 561.45 L 692.74 547.96 L 653.3 550.48 C 642.23 551.17 634.08 553.44 628.84 557.3 C 623.6 561.16 620.99 566.64 620.99 573.76 C 620.99 580.88 623.75 586.49 629.29 590.59 C 634.83 594.69 642.04 596.74 650.94 596.74" />
+                        <path fill="#ffffff"
+                            d="M 757.41 620.87 L 757.41 459.43 L 788.1 459.43 L 788.1 484.19 L 790.47 484.19 C 792.74 476.18 797.96 469.61 806.11 464.47 C 814.26 459.33 823.58 456.76 834.05 456.76 C 840.08 456.76 844.82 457.21 848.28 458.09 L 848.28 489.52 C 844.42 488.24 838.5 487.59 830.49 487.59 C 818.33 487.59 808.42 491.1 800.77 498.11 C 793.11 505.13 789.28 514.27 789.28 525.54 L 789.28 620.86 L 757.41 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 902.41 526.73 L 966.45 459.42 L 1004.11 459.42 L 937.69 528.65 L 1008.55 620.87 L 969.41 620.87 L 913.97 549.71 L 899.88 563.05 L 899.88 620.87 L 868.01 620.87 L 868.01 456.75 L 899.88 456.31 L 899.88 526.73 L 902.41 526.73 Z" />
+                    </svg>
+                </div>
+                <div class="badge" style="font-size: 17px; padding: 10px 20px;">
+                    <span class="dot" style="width: 8px; height: 8px;"></span>
+                    FREELANCE
+                </div>
+            </div>
+
+            <!-- Title -->
+            <div style="text-align: center; margin-bottom: 45px;">
+                <div style="font-size: 52px; font-weight: 900; color: #fff; letter-spacing: 0;">Available Opportunities</div>
+                <div
+                    style="color: rgba(255,255,255,0.4); font-size: 22px; font-weight: 500; margin-top: 10px; letter-spacing: 0;">
+                    Choose your fit and apply now</div>
+            </div>
+
+            <!-- Roles list -->
+            <div style="display: flex; flex-direction: column; gap: 16px; flex: 1;">
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(139,92,246,0.05)); border: 1px solid rgba(139,92,246,0.15);">
+                        📈</div>
+                    <div>
+                        <div class="role-title">Marketing Manager</div>
+                        <div class="role-desc">Lead multi-channel campaigns and drive measurable growth</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(6,182,212,0.05)); border: 1px solid rgba(6,182,212,0.15);">
+                        📋</div>
+                    <div>
+                        <div class="role-title">Marketing Coordinator</div>
+                        <div class="role-desc">Coordinate initiatives and manage project timelines</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(236,72,153,0.2), rgba(236,72,153,0.05)); border: 1px solid rgba(236,72,153,0.15);">
+                        📱</div>
+                    <div>
+                        <div class="role-title">Social Media Specialist</div>
+                        <div class="role-desc">Create engaging content and grow the digital community</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(245,158,11,0.05)); border: 1px solid rgba(245,158,11,0.15);">
+                        📊</div>
+                    <div>
+                        <div class="role-title">Media Buyer</div>
+                        <div class="role-desc">Plan and optimize paid ads to maximize ROAS</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(16,185,129,0.05)); border: 1px solid rgba(16,185,129,0.15);">
+                        🎨</div>
+                    <div>
+                        <div class="role-title">Creative Director</div>
+                        <div class="role-desc">Set the visual and creative direction for the brand</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(59,130,246,0.05)); border: 1px solid rgba(59,130,246,0.15);">
+                        ✍️</div>
+                    <div>
+                        <div class="role-title">Copywriter</div>
+                        <div class="role-desc">Write persuasive, on-brand copy for all channels</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(139,92,246,0.05)); border: 1px solid rgba(139,92,246,0.15);">
+                        🤝</div>
+                    <div>
+                        <div class="role-title">Account Manager</div>
+                        <div class="role-desc">Build lasting client relationships and ensure exceptional delivery</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(6,182,212,0.05)); border: 1px solid rgba(6,182,212,0.15);">
+                        🎬</div>
+                    <div>
+                        <div class="role-title">Videographer</div>
+                        <div class="role-desc">Shoot high-quality video for brand campaigns</div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-icon"
+                        style="background: linear-gradient(135deg, rgba(236,72,153,0.2), rgba(236,72,153,0.05)); border: 1px solid rgba(236,72,153,0.15);">
+                        🎞️</div>
+                    <div>
+                        <div class="role-title">Video Editor</div>
+                        <div class="role-desc">Transform raw footage into polished, engaging videos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06);">
+                <div style="color: rgba(255,255,255,0.35); font-size: 20px; font-weight: 600; letter-spacing: 0;">
+                    Swipe up to apply ↑
+                </div>
+                <div class="footer-info" style="font-size: 18px;">
+                    <span>@remark.iq</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+     PAGE 4: INSTAGRAM POST — Single Role Highlight (1080 × 1080)
+     ═══════════════════════════════════════════════════════ -->
+    <div class="label">Instagram Post — Single Role — 1080 × 1080</div>
+    <div class="post">
+        <!-- Ambient glows -->
+        <div class="glow-violet" style="top: -20%; left: 20%; width: 600px; height: 600px;"></div>
+        <div class="glow-cyan" style="bottom: -10%; right: -5%; width: 450px; height: 450px;"></div>
+
+        <!-- Hex pattern -->
+        <div class="hex-overlay"></div>
+
+        <!-- Lines -->
+        <div class="top-line"></div>
+        <div class="bottom-line"></div>
+
+        <!-- Crystal hex decorations -->
+        <div class="crystal-hex" style="top: 40px; right: 40px; width: 120px; height: 120px; opacity: 0.12;"></div>
+        <div class="crystal-hex" style="bottom: 80px; left: 50px; width: 90px; height: 90px; opacity: 0.08;"></div>
+
+        <!-- Content -->
+        <div
+            style="position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; height: 100%; padding: 60px 80px;">
+
+            <!-- Header -->
+            <div style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <svg width="110" height="22" viewBox="60 440 960 200" xmlns="http://www.w3.org/2000/svg"
+                        style="filter: drop-shadow(0 0 10px rgba(139,92,246,0.3));">
+                        <path fill="#ffffff"
+                            d="M 71 620.87 L 71 459.43 L 101.69 459.43 L 101.69 484.19 L 104.06 484.19 C 106.33 476.18 111.55 469.61 119.7 464.47 C 127.85 459.33 137.17 456.76 147.64 456.76 C 153.67 456.76 158.41 457.21 161.87 458.09 L 161.87 489.52 C 158.01 488.24 152.09 487.59 144.08 487.59 C 131.92 487.59 122.01 491.1 114.36 498.11 C 106.7 505.13 102.87 514.27 102.87 525.54 L 102.87 620.86 L 71 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 281.81 577.28 L 312.5 577.28 C 308.84 591.81 300.87 603.22 288.56 611.53 C 276.26 619.83 260.92 623.98 242.53 623.98 C 219.4 623.98 201.19 616.54 187.9 601.67 C 174.61 586.79 167.96 566.46 167.96 540.66 C 167.96 514.86 174.68 494.36 188.12 479.14 C 201.56 463.92 219.64 456.31 242.38 456.31 C 265.12 456.31 282.43 463.53 295.23 477.96 C 308.03 492.39 314.43 512.3 314.43 537.7 L 314.43 548.82 L 200.42 548.82 L 200.42 550.6 C 200.92 564.83 205.02 576.1 212.72 584.4 C 220.43 592.7 230.66 596.85 243.41 596.85 C 262.88 596.85 275.68 590.33 281.81 577.28 M 270.62 494.78 C 263.45 487.22 253.99 483.44 242.23 483.44 C 230.47 483.44 220.78 487.25 213.17 494.86 C 205.56 502.47 201.31 512.6 200.42 525.25 L 281.96 525.25 C 281.56 512.5 277.78 502.35 270.62 494.78" />
+                        <path fill="#ffffff"
+                            d="M 340.23 620.87 L 340.23 459.43 L 370.92 459.43 L 370.92 485.37 L 373.29 485.37 C 376.85 476.18 382.56 469.04 390.41 463.95 C 398.27 458.86 407.53 456.32 418.21 456.32 C 428.89 456.32 438.17 458.89 445.78 464.03 C 453.39 469.17 459.02 476.28 462.68 485.38 L 465.2 485.38 C 469.35 476.49 475.8 469.42 484.55 464.18 C 493.3 458.94 503.21 456.32 514.28 456.32 C 530.59 456.32 543.26 461.01 552.3 470.4 C 561.34 479.79 565.87 492.89 565.87 509.69 L 565.87 620.88 L 534 620.88 L 534 518 C 534 496.35 523.57 485.53 502.72 485.53 C 492.54 485.53 484.31 488.74 478.04 495.16 C 471.76 501.59 468.62 509.64 468.62 519.33 L 468.62 620.88 L 437.34 620.88 L 437.34 514.88 C 437.34 505.79 434.52 498.62 428.89 493.38 C 423.26 488.14 415.7 485.52 406.21 485.52 C 396.72 485.52 388.42 489.03 381.9 496.04 C 375.38 503.06 372.11 511.75 372.11 522.13 L 372.11 620.86 L 340.24 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 642.81 623.54 C 627 623.54 614.07 619.12 604.04 610.27 C 594.01 601.42 588.99 589.74 588.99 575.21 C 588.99 560.68 594.18 549.44 604.55 541.19 C 614.93 532.94 629.75 528.22 649.03 527.03 L 692.76 524.51 L 692.76 510.58 C 692.76 501.98 689.94 495.38 684.31 490.79 C 678.68 486.19 670.47 483.9 659.7 483.9 C 650.8 483.9 643.41 485.46 637.54 488.57 C 631.66 491.68 627.82 496.11 626.05 501.84 L 595.21 501.84 C 596.79 488.01 603.58 476.96 615.59 468.71 C 627.6 460.46 642.8 456.33 661.18 456.33 C 681.34 456.33 696.93 461.1 707.95 470.63 C 718.97 480.17 724.48 493.49 724.48 510.59 L 724.48 620.89 L 693.79 620.89 L 693.79 598.21 L 691.27 598.21 C 686.43 606.32 679.78 612.57 671.33 616.96 C 662.88 621.36 653.37 623.56 642.79 623.56 M 650.94 596.73 C 662.9 596.73 672.86 593.37 680.81 586.65 C 688.76 579.93 692.74 571.53 692.74 561.45 L 692.74 547.96 L 653.3 550.48 C 642.23 551.17 634.08 553.44 628.84 557.3 C 623.6 561.16 620.99 566.64 620.99 573.76 C 620.99 580.88 623.75 586.49 629.29 590.59 C 634.83 594.69 642.04 596.74 650.94 596.74" />
+                        <path fill="#ffffff"
+                            d="M 757.41 620.87 L 757.41 459.43 L 788.1 459.43 L 788.1 484.19 L 790.47 484.19 C 792.74 476.18 797.96 469.61 806.11 464.47 C 814.26 459.33 823.58 456.76 834.05 456.76 C 840.08 456.76 844.82 457.21 848.28 458.09 L 848.28 489.52 C 844.42 488.24 838.5 487.59 830.49 487.59 C 818.33 487.59 808.42 491.1 800.77 498.11 C 793.11 505.13 789.28 514.27 789.28 525.54 L 789.28 620.86 L 757.41 620.86 Z" />
+                        <path fill="#ffffff"
+                            d="M 902.41 526.73 L 966.45 459.42 L 1004.11 459.42 L 937.69 528.65 L 1008.55 620.87 L 969.41 620.87 L 913.97 549.71 L 899.88 563.05 L 899.88 620.87 L 868.01 620.87 L 868.01 456.75 L 899.88 456.31 L 899.88 526.73 L 902.41 526.73 Z" />
+                    </svg>
+                </div>
+                <div class="badge" style="font-size: 16px; padding: 8px 18px;">
+                    <span class="dot" style="width: 7px; height: 7px;"></span>
+                    FREELANCE
+                </div>
+            </div>
+
+            <!-- Role icon large -->
+            <div
+                style="margin-top: 50px; width: 110px; height: 110px; border-radius: 28px; background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(6,182,212,0.1)); border: 1px solid rgba(139,92,246,0.2); display: flex; align-items: center; justify-content: center; font-size: 50px; box-shadow: 0 0 40px rgba(139,92,246,0.15);">
+                🎨
+            </div>
+
+            <!-- Role title -->
+                <div style="margin-top: 35px; text-align: center;">
+                <div style="font-size: 62px; font-weight: 900; letter-spacing: 0;" class="gradient-text">Creative Director
+                </div>
+                <div
+                    style="font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.35); margin-top: 4px; letter-spacing: 0.15em; font-family: 'Inter', sans-serif;">
+                    CREATIVE DIRECTOR</div>
+            </div>
+
+            <!-- Description -->
+            <div
+                style="margin-top: 30px; text-align: center; color: rgba(255,255,255,0.5); font-size: 24px; font-weight: 500; line-height: 1.7; max-width: 800px; letter-spacing: 0;">
+                Set the visual and conceptual direction of the brand, overseeing design, copy, and creative production
+            </div>
+
+            <!-- Requirements pills -->
+            <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+                <span
+                    style="padding: 12px 22px; border-radius: 999px; background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.15); color: rgba(255,255,255,0.65); font-size: 19px; font-weight: 700; letter-spacing: 0;">7+ Years Experience</span>
+                <span
+                    style="padding: 12px 22px; border-radius: 999px; background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.15); color: rgba(255,255,255,0.65); font-size: 19px; font-weight: 700; letter-spacing: 0;">Leadership Role</span>
+                <span
+                    style="padding: 12px 22px; border-radius: 999px; background: rgba(236,72,153,0.1); border: 1px solid rgba(236,72,153,0.15); color: rgba(255,255,255,0.65); font-size: 19px; font-weight: 700; letter-spacing: 0;">Stunning Portfolio</span>
+                <span
+                    style="padding: 12px 22px; border-radius: 999px; background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.15); color: rgba(255,255,255,0.65); font-size: 19px; font-weight: 700; letter-spacing: 0;">Design & Production</span>
+            </div>
+
+            <!-- Bottom -->
+            <div
+                style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                <div class="footer-info" style="font-size: 18px;">
+                    <span>@remark.iq</span>
+                    <span style="color: rgba(139,92,246,0.4);">•</span>
+                    <span>remark-agency.com</span>
+                </div>
+                <div class="cta-btn" style="padding: 16px 40px; font-size: 22px;">Apply Now</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
